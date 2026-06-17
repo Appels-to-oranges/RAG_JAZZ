@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "title": "Jazz scale",
+    "url": "https://en.wikipedia.org/wiki/Jazz_scale",
+    "summary": "A jazz scale is any musical scale used in jazz. Many \"jazz scales\" are common scales drawn from Western European classical music, including the diatonic, whole-tone, octatonic (or diminished), and the modes of the ascending melodic minor. All of these scales were commonly used by late nineteenth and early twentieth-century composers such as Rimsky-Korsakov, Debussy, Ravel and Stravinsky, often in ways that directly anticipate jazz practice. Some jazz scales, such as the eight-note bebop scales, ",
+    "categories": [
+      "Category:All articles needing additional references",
+      "Category:All articles with incomplete citations",
+      "Category:All articles with unsourced statements",
+      "Category:Articles needing additional references from July 2023",
+      "Category:Articles needing additional references from October 2020",
+      "Category:Articles with incomplete citations from July 2015",
+      "Category:Articles with short description",
+      "Category:Articles with unsourced statements from January 2019",
+      "Category:Jazz techniques",
+      "Category:Musical scales",
+      "Category:Pages using the Score extension",
+      "Category:Short description matches Wikidata"
+    ],
+    "downloaded_at": "2026-06-17T01:53:04.976315+00:00",
+    "source": "wikipedia",
+    "language": "en"
+  },
+  "full_text": "A jazz scale is any musical scale used in jazz. Many \"jazz scales\" are common scales drawn from Western European classical music, including the diatonic, whole-tone, octatonic (or diminished), and the modes of the ascending melodic minor. All of these scales were commonly used by late nineteenth and early twentieth-century composers such as Rimsky-Korsakov, Debussy, Ravel and Stravinsky, often in ways that directly anticipate jazz practice. Some jazz scales, such as the eight-note bebop scales, add additional chromatic passing tones to the familiar seven-note diatonic scales.\n\n\n== Theory ==\n\nOne important feature of jazz is what theorists call \"the principles of chord-scale compatibility\": the idea that a sequence of chords will generate a sequence of compatible scales. In classical major-mode harmony, chords typically belong to the same scale. For example, a ii–V–I progression in C major will typically use only the notes of the C diatonic collection. In jazz, a four-chord progression may use four different scales, often as the result of chordal alterations.\nFor instance, in C major, a jazz musician may alter the V chord, G7 (G–B–D–F), with a flattened fifth, producing the chord G7♭5 (G–B–D♭–F). An improviser might then choose a scale containing these four notes, such as the G whole tone scale, the G octatonic scale, or a mode of either D or A♭ melodic minor ascending. In each case, the scale contains the chord tones G–B–D♭–F and is said to be compatible with it. This notion of \"chord scale compatibility\" marks a fundamental difference between jazz harmony and traditional classical practice.\nAn avoid note is a note in a jazz scale that is considered, in jazz theory and practice, too dissonant to be emphasised against the underlying chord, and so is either avoided, used as a passing tone or chromatically altered. For example, in major-key harmony the 4th, and thus the 11th, is an avoid note and is therefore either treated as a passing tone or is augmented (raised a semitone). Avoid notes are often a minor second (or a minor ninth) above a chord tone or a perfect fourth above the root of the chord.\n\n[One] can get a good sense of the difference between classical and non-classical harmony from looking at how they deal with dissonances. Classical treats all notes that don't belong to the chord (i.e., the triad) as potential dissonances to be resolved. ... Non-classical harmony just tells you which note in the scale to avoid [\"what is sometimes called an avoid-note\"] (because it's really dissonant), meaning that all the others are okay.\n\n\n== Modes of the major scale ==\n\nThe number of scales available to improvising musicians continues to expand. As modern techniques and musical constructions appear, jazz players find the ones they can put into compositions or use as material for melodic exploration. Prominent examples are the seven modes of the diatonic major scale and added-note scales.\n\nCompare each of the modes to the major scale for clues as to the subtle differences between them. Ionian is based on the 1st degree of the major scale, Dorian on the 2nd, Phrygian on the 3rd, etc.\n\n\n== Bebop scales ==\n\nBebop scales add a single chromatic passing tone to the seven-note major scale (Ionian and Mixolydian modes). The added passing tone creates an eight-note scale that fits rhythmically evenly within a 44 measure of 8 eighth notes, thus making it useful in practicing. When an eighth note bebop scale run starts on the beat from a chord tone (i.e. the root, third, fifth or seventh) the other chord notes will also fall on the beat. As a result, all of the nonchord tones will fall on upbeats.\nThere are two commonly used types of bebop scale:\n\nThe dominant bebop scale, which adds a chromatic passing tone between the 7th and the root.\n\nThe major bebop scale, which adds a chromatic passing tone between the 5th and 6th notes.\n\n\n== Modes of the melodic minor scale ==\n\nA great deal of modern jazz harmony arises from the modes of the ascending form of the melodic minor scale, also known as the jazz melodic minor scale. This scale is essentially a diatonic major scale with a lowered third, for example A-B-C-D-E-F♯-G♯-A. As with any other scale, the modes are derived from playing the scale from different root notes, causing a series of jazz scales to emerge.\n\n\n== Diminished scale ==\n\nSometimes called the octatonic scale because it contains eight tones, the diminished scale is composed of a series of alternating half and whole steps. There are two types of diminished scales, one starts with a half step and the other starts with a whole step. The two scales are modes of one another.\nBecause of the repetition of the interval pattern after only two notes, each note in the scale can be the root in another symmetric diminished scale. For example, the C diminished scale of the half-step-first type, has the same notes as the half-step-first E♭ diminished scale as well as the whole-step-first D♭ diminished scale. All three are composed of the same eight pitches: C–D♭–E♭–E♮–F♯–G–A–B♭–C.\nBecause of the symmetry of the diminished scale, there are only three distinct diminished scales (shown to the right). The others are all modes of these three.\n\n\n== Whole tone scale ==\n\nThe whole tone scale, consisting exclusively of whole steps, is often used on V7♯5 chords. Since they are symmetrical, there are only two distinct whole tone scales.\n\n\n== Pentatonic scales ==\n\nTwo pentatonic scales common to jazz are the major pentatonic scale and the minor pentatonic scale. They are both modes of one another.\nThe major pentatonic scale begins with a major scale and omits the fourth and the seventh scale degrees. The minor pentatonic scale uses the same notes as the major pentatonic scale, but begins on the sixth scale degree of the corresponding major scale. In this nomenclature, minor is employed in the sense of relative key, as the diatonic A minor scale is the relative minor of the diatonic C major scale.\nJazz improvisers, particularly bassist and guitarist, use these scales in a number of interesting ways. For example, over B♭maj7♯11, one can use a major pentatonic based on the 2nd scale degree of B♭ (C–D–E–G–A) to imply 9–3–♯11–13–7, respectively. Similarly, over a fully altered F♯7 chord, one can use the same major pentatonic, this time based on the tritone (C–D–E–G–A) to imply ♭5–♭13–♭7–♭9–♯9, respectively.\n\n\n== Blues scale ==\nThe term blues scale refers to several different scales with differing numbers of pitches and related characteristics. The six-note blues scale consists of the minor pentatonic scale plus a chromatic passing tone between the 4 and 5. This added note can be spelled as either ♭5 or ♯4. Guitarists often mix the major and minor pentatonics together along with the blues scale.\nAnother common blues scale has nine notes (shown to the right). Winthrop Sargeant defines this scale as \"a definite series of tones within an octave used as the basis of a musical composition,\" compiled instead from multiple compositions and improvisations (according to Stearns: \"a great many jazz records\") and is hypothesized as displaying the influence of African music. The E♭ and B♭ are blue notes.\n\n\n== Harmonic minor scale ==\n\nThe harmonic minor scale is also of value to many improvisors, as it provides an alternative color for many common chords and chord progressions. The A harmonic minor scale can be used on the chords of a piece in A minor, especially on the minor ii–V–i chord progression.\nOne of the most common uses of the harmonic minor scale is its fifth mode (phrygian dominant scale), which is a frequently used over dominant chords.\n\n\n== Altered dominant scale ==\n\nThe altered dominant scale, also called the altered scale, is so named because all the scale members that can be altered relative to the basic dominant scale (the Mixolydian mode), without losing the dominant quality, are altered. The scale includes both altered fifths (♭5 and ♯5) and both altered ninths (♭9 and ♯9).\nStarting on G, it contains the notes: G, A♭, B♭, C♭, D♭, E♭ and F.\nStarting on C, it contains the notes: C, D♭, E♭, F♭, G♭, A♭ and B♭.\nThe altered fifths coincide enharmonically with the ♯11 and the ♭13 which would also be considered altered relative to their Mixolydian forms. The tonic, major third (as a diminished fourth), and dominant seventh are retained as essential to the dominant quality.\nThe scale can also be understood as a mode of the ascending melodic minor scale starting from the 7th scale degree. For a G7 chord, the A♭ melodic minor scale starting from G produces the G altered dominant scale.\nThis scale is also called the super-Locrian scale, as it is indeed reminiscent of a Locrian scale with a ♭4, but it is usually regarded as that of major quality. Another name for this scale is the diminished whole-tone scale due to its resemblance to the lower part of the diminished scale and the upper part of the whole tone scale.\n\n\n== References ==\n\n\n== Further reading ==\nYamaguchi, Masaya. 2006. The Complete Thesaurus of Musical Scales, revised edition. New York: Masaya Music Services. ISBN 0-9676353-0-6.",
+  "sections": [
+    {
+      "title": "Theory",
+      "depth": 1,
+      "number": "1"
+    },
+    {
+      "title": "Modes of the major scale",
+      "depth": 1,
+      "number": "2"
+    },
+    {
+      "title": "Bebop scales",
+      "depth": 1,
+      "number": "3"
+    },
+    {
+      "title": "Modes of the melodic minor scale",
+      "depth": 1,
+      "number": "4"
+    },
+    {
+      "title": "Diminished scale",
+      "depth": 1,
+      "number": "5"
+    },
+    {
+      "title": "Whole tone scale",
+      "depth": 1,
+      "number": "6"
+    },
+    {
+      "title": "Pentatonic scales",
+      "depth": 1,
+      "number": "7"
+    },
+    {
+      "title": "Blues scale",
+      "depth": 1,
+      "number": "8"
+    },
+    {
+      "title": "Harmonic minor scale",
+      "depth": 1,
+      "number": "9"
+    },
+    {
+      "title": "Altered dominant scale",
+      "depth": 1,
+      "number": "10"
+    },
+    {
+      "title": "References",
+      "depth": 1,
+      "number": "11"
+    },
+    {
+      "title": "Further reading",
+      "depth": 1,
+      "number": "12"
+    }
+  ]
+}

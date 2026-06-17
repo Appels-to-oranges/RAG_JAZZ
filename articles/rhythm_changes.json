@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Rhythm changes",
+    "url": "https://en.wikipedia.org/wiki/Rhythm_changes",
+    "summary": "The Rhythm changes is a common 32-bar jazz chord progression derived from George Gershwin's \"I Got Rhythm\". The progression is in AABA form, with each A section based on repetitions of the ubiquitous I–vi–ii–V sequence (or variants such as iii–vi–ii–V), and the B section using a circle of fifths sequence based on III7–VI7–II7–V7, a progression which is sometimes given passing chords.\nThis pattern, \"one of the most common vehicles for improvisation,\" forms the basis of countless (usually uptempo)",
+    "categories": [
+      "Category:Articles with short description",
+      "Category:Jazz standards",
+      "Category:Jazz terminology",
+      "Category:Major-key chord progressions",
+      "Category:Pages using the Score extension",
+      "Category:Short description matches Wikidata",
+      "Category:Use mdy dates from February 2025"
+    ],
+    "downloaded_at": "2026-06-17T01:53:11.610530+00:00",
+    "source": "wikipedia",
+    "language": "en"
+  },
+  "full_text": "The Rhythm changes is a common 32-bar jazz chord progression derived from George Gershwin's \"I Got Rhythm\". The progression is in AABA form, with each A section based on repetitions of the ubiquitous I–vi–ii–V sequence (or variants such as iii–vi–ii–V), and the B section using a circle of fifths sequence based on III7–VI7–II7–V7, a progression which is sometimes given passing chords.\nThis pattern, \"one of the most common vehicles for improvisation,\" forms the basis of countless (usually uptempo) jazz compositions and was popular with swing-era and bebop musicians. For example, it is the basis of Duke Ellington's \"Cotton Tail\" as well as Charlie Christian's \"Seven Come Eleven,\" Dizzy Gillespie's \"Salt Peanuts,\" and Thelonious Monk's \"Rhythm-a-Ning\". The earliest known use of rhythm changes was by Sidney Bechet in his September 15, 1932 recording of \"Shag\" (two years after the first performance of \"I Got Rhythm\" on Broadway)  with his \"New Orleans Feetwarmers\" group.\nIn pop culture, \"Meet the Flintstones\", (c. 1960, Curtin/Hanna/Barbera) is based on the rhythm changes, thereby being a contrafact of \"I Got Rhythm\".\n\n\n== History ==\nThis progression's endurance in popularity is largely due to its extensive use by early bebop musicians. The chord changes began to be used in the 1930s, became common in the '40s and '50s, and are now ubiquitous. First, \"I Got Rhythm\" was by then already a popular jazz standard. Second, by listening to the song and writing a new melody over its chord changes, thereby creating a composition of a type now known as a contrafact, a jazz musician could claim copyright to the new melody rather than acknowledge Gershwin's inspiration and pay royalties to Gershwin's estate. Third, using a stock, well-known progression for new melodies made it easier to perform a song at jam sessions, shows, and recordings because the bandleader could tell new musicians that the song uses rhythm changes and note any modifications and chord substitutions.\nFor contemporary musicians, mastery of the 12-bar blues and rhythm changes chord progressions are \"critical elements for building a jazz repertoire\".\n\n\n== Chords ==\nThe rhythm changes is a 32-bar AABA form with each section consisting of eight bars, and four 8-bar sections. In roman numeral shorthand, the original chords used in the A section are:\n\na 2-bar phrase, I−vi−ii−V (often modified to I–VI–ii–V), played twice, followed by a 4-bar phrase\n\nIn a jazz band, these chord changes are usually played in the key of B♭ with various chord substitutions. Here is a typical form for the A section with various common substitutions, including bVII7 in place of the minor iv chord; the addition of a ii–V progression (Fm7–B♭7) that briefly tonicizes the IV chord, E♭; using iii in place of I in bar 7 (the end of the first A section); and using a ii-V-I in place of I-V-I in bars 15 and 16 (the end of the second A section):\n\nThe \"bridge\" consists of a series of dominant seventh chords (III7–VI7–II7–V7) that follow the circle of fourths (ragtime progression), sustained for two bars each, greatly slowing the harmonic rhythm as a contrast with the A sections. This is known as the Sears Roebuck bridge, named after Sears, Roebuck and Co.\n\nThe B section is followed by a final A section\n\nVariant versions of changes are common due to the popularity of adding interest with chord substitutions, passing chords, and changes of chord quality. Bebop players, for instance, would often superimpose series of ii–V progressions (passing sequences of minor seventh and dominant seventh chords) or other substitutions for interesting or in order to discourage less experienced musicians from \"sitting in\" on the bandstand. The opening I chord was B♭6 in Gershwin's original, but beboppers changed it to B♭M7 or B♭7. For instance, the B section may appear as follows:\n\nAn even more adventurous bebop-style substitution is to convert C7 | C7 | F7 | F7 to Gm7 | C7 | Cm7 | F7, and then further develop this substitution by changing this to Am7 D7 | Gm7 C7 | Dm7 G7 | Cm7 F7.\n\n\n== Examples ==\n\nThe following is a partial list of songs based on the rhythm changes:\n\nThe component A and B sections of rhythm changes were also sometimes used for other tunes. For instance, Charlie Parker's \"Scrapple from the Apple\" and Juan Tizol's \"Perdido\" both use a different progression for the A section while using the rhythm changes bridge. \"Scrapple from the Apple\" uses the chord changes of \"Honeysuckle Rose\" for the A section but replaces the B section with III7–VI7–II7–V7.\nOther tunes use the A section of \"Rhythm\" but have a different bridge. Tadd Dameron's \"Good Bait\" uses the A section of the Rhythm changes and then in the B section it again re-uses the A section of Rhythm Changes but transposed up by a perfect fourth.\n\n\n== See also ==\nMontgomery-Ward bridge\n\n\n== References ==\n\n\n== Further reading ==\nR., Ken (2012). DOG EAR Tritone Substitution for Jazz Guitar, Amazon Digital Services, ASIN: B008FRWNIW",
+  "sections": [
+    {
+      "title": "History",
+      "depth": 1,
+      "number": "1"
+    },
+    {
+      "title": "Chords",
+      "depth": 1,
+      "number": "2"
+    },
+    {
+      "title": "Examples",
+      "depth": 1,
+      "number": "3"
+    },
+    {
+      "title": "See also",
+      "depth": 1,
+      "number": "4"
+    },
+    {
+      "title": "References",
+      "depth": 1,
+      "number": "5"
+    },
+    {
+      "title": "Further reading",
+      "depth": 1,
+      "number": "6"
+    }
+  ]
+}

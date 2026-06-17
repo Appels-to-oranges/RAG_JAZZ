@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "title": "Pentatonic scale",
+    "url": "https://en.wikipedia.org/wiki/Pentatonic_scale",
+    "summary": "A pentatonic scale is a musical scale with five notes per octave, in contrast to heptatonic scales, which have seven notes per octave (such as the major scale and minor scale).\nPentatonic scales were developed independently by many ancient civilizations and are still used in various musical styles to this day. As Leonard Bernstein put it: \"The universality of this scale is so well known that I'm sure you could give me examples of it, from all corners of the earth, as from Scotland, or from China",
+    "categories": [
+      "Category:5 (number)",
+      "Category:Accuracy disputes from December 2017",
+      "Category:Accuracy disputes from October 2008",
+      "Category:All accuracy disputes",
+      "Category:All articles with dead external links",
+      "Category:All articles with failed verification",
+      "Category:All articles with unsourced statements",
+      "Category:Articles with dead external links from February 2023",
+      "Category:Articles with dead external links from November 2020",
+      "Category:Articles with failed verification from January 2020",
+      "Category:Articles with hAudio microformats",
+      "Category:Articles with permanently dead external links",
+      "Category:Articles with short description",
+      "Category:Articles with unsourced statements from December 2016",
+      "Category:Articles with unsourced statements from March 2017",
+      "Category:Articles with unsourced statements from May 2015",
+      "Category:Musical scales",
+      "Category:Pages using the Score extension",
+      "Category:Pentatonic scales",
+      "Category:Short description is different from Wikidata",
+      "Category:Webarchive template wayback links",
+      "Category:Wikipedia articles needing clarification from January 2020"
+    ],
+    "downloaded_at": "2026-06-17T01:53:08.305535+00:00",
+    "source": "wikipedia",
+    "language": "en"
+  },
+  "full_text": "A pentatonic scale is a musical scale with five notes per octave, in contrast to heptatonic scales, which have seven notes per octave (such as the major scale and minor scale).\nPentatonic scales were developed independently by many ancient civilizations and are still used in various musical styles to this day. As Leonard Bernstein put it: \"The universality of this scale is so well known that I'm sure you could give me examples of it, from all corners of the earth, as from Scotland, or from China, or from Africa, and from American Indian cultures, from East Indian cultures, from Central and South America, Australia, Finland ... now, that is a true musico-linguistic universal.\" There are two types of pentatonic scales: those with semitones (hemitonic) and those without (anhemitonic).\n\n\n== Types ==\n\n\n=== Hemitonic and anhemitonic ===\n\nMusicology commonly classifies pentatonic scales as either hemitonic or anhemitonic. Hemitonic scales contain one or more semitones and anhemitonic scales do not contain semitones. (For example, in Japanese music the anhemitonic yo scale is contrasted with the hemitonic in scale.) Hemitonic pentatonic scales are also called \"ditonic scales\", because the largest interval in them is the ditone (e.g., in the scale C–E–F–G–B–C, the interval found between C–E and G–B). (This should not be confused with the identical term also used by musicologists to describe a scale including only two notes.)\n\n\n=== Major pentatonic scale ===\nAnhemitonic pentatonic scales can be constructed in many ways. The major pentatonic scale may be thought of as a gapped or incomplete major scale, using scale tones 1, 2, 3, 5, and 6 of the major scale. One construction takes five consecutive pitches from the circle of fifths; starting on C, these are C, G, D, A, and E. Rearranging the pitches to fit into one octave creates the major pentatonic scale: C, D, E, G, A.\n\nAnother construction works backward: It omits two pitches from a diatonic scale. If one were to begin with a C major scale, for example, one might omit the fourth and the seventh scale degrees, F and B. The remaining notes then make up the major pentatonic scale: C, D, E, G, and A.\nOmitting the third and seventh degrees of the C major scale obtains the notes for another transpositionally equivalent anhemitonic pentatonic scale: F, G, A, C, D. Omitting the first and fourth degrees of the C major scale gives a third anhemitonic pentatonic scale: G, A, B, D, E.\nThe black keys on a piano keyboard comprise a G-flat (or equivalently, F-sharp) major pentatonic scale: G-flat, A-flat, B-flat, D-flat, and E-flat, which is exploited in Chopin's black key étude.\n\n\n=== Minor pentatonic scale ===\nAlthough various hemitonic pentatonic scales might be called minor, the term is most commonly applied to the relative minor pentatonic derived from the major pentatonic, using scale tones 1, ♭3, 4, 5, and ♭7 of the natural minor scale. (It may also be considered a gapped blues scale.) The C minor pentatonic scale, the relative minor of the E-flat pentatonic scale, is C, E-flat, F, G, B-flat. The A minor pentatonic, the relative minor of C pentatonic, comprises the same tones as the C major pentatonic, starting on A, giving A, C, D, E, G. This minor pentatonic contains all three tones of an A minor triad.\n\nThe standard tuning of a guitar uses the notes of an E minor pentatonic scale: E–A–D–G–B–E, contributing to its frequency in popular music. Stevie Wonder employed the minor pentatonic for the funky clavinet riff on the track \"Superstition\" (1972).\n\n\n=== Japanese scale ===\n\nThe Japanese mode is based on the Phrygian mode, but uses scale tones 1, 2, 4, 5, and 6 instead of scale tones 1, 3, 4, 5, and 7.\n\n\n== Modes of the pentatonic scale ==\n\nThe pentatonic scale (containing notes C, D, E, G, and A) has five modes, which are derived by treating a different note as the tonic:\n\nRicker assigned the major pentatonic scale mode I while Gilchrist assigned it mode III.\n\n\n=== Relationship to diatonic modes ===\nEach mode of the pentatonic scale (containing notes C, D, E, G, and A) can be thought of as the five scale degrees shared by three different diatonic modes with the two remaining scale degrees removed:\n\n\n=== Intervals from tonic ===\n\nEach mode of the pentatonic scale (containing notes C, D, E, G, and A) features different intervals of notes from the tonic according to the table below. Note the omission of the semitones above (m2) and below (M7) the tonic as well as the tritone (TT).\n\n\n== Tuning ==\n\n\n=== Pythagorean tuning ===\n\nBen Johnston gives the following Pythagorean tuning for the minor pentatonic scale:\n\nNaturals in that table are not the alphabetic series A to G without sharps and flats: Naturals are reciprocals of terms in the Harmonic series (mathematics), which are in practice multiples of a fundamental frequency. This may be derived by proceeding with the principle that historically gives the Pythagorean diatonic and chromatic scales, stacking perfect fifths with 3:2 frequency proportions (C–G–D–A–E). Considering the anhemitonic scale as a subset of a just diatonic scale, it is tuned thus: 20:24:27:30:36 (A–C–D–E–G = 5⁄6–1⁄1–9⁄8–5⁄4–3⁄2).\n\n\n=== Just intonation ===\n\n(A minor seventh can be 7:4, 16:9, or 9:5; a major sixth can be 27:16 or 5:3. Both were chosen to minimize ratio parts.)\n\n\n=== Other ===\nAssigning precise frequency proportions to the pentatonic scales of most cultures is problematic as tuning may be variable.\n\nFor example, the slendro anhemitonic scale and its modes of Java and Bali are said to approach, very roughly, an equally-tempered five-note scale, but their tunings vary dramatically from gamelan to gamelan.\nComposer Lou Harrison has been one of the most recent proponents and developers of new pentatonic scales based on historical models. Harrison and William Colvig tuned the slendro scale of the gamelan Si Betty to overtones 16:19:21:24:28 (1⁄1–19⁄16–21⁄16–3⁄2–7⁄4). They tuned the Mills gamelan so that the intervals between scale steps are 8:7–7:6–9:8–8:7–7:6 (1⁄1–8⁄7–4⁄3–3⁄2–12⁄7–2⁄1 = 42:48:56:63:72)\n\n\n== Use of pentatonic scales ==\n\n\n=== Overview ===\nPentatonic scales occur in many musical traditions:\n\n\n=== Example details ===\n\n\n==== In classical music ====\nExamples of its use include:\n\nBeethoven, Quartet in F major, Op. 135, finale:  \nChopin's Etude in G-flat major, Op. 10, No. 5, the \"Black Key\" etude, in the major pentatonic. \nWestern Impressionistic composers such as French composer Claude Debussy and Maurice Ravel used the pentatonic scale extensively in their works.\n\n \nGiacomo Puccini used pentatonic scales in his operas Madama Butterfly and Turandot to imitate east Asian musical styles. Puccini also used whole-tone scales in the former to evoke similar ideas.\n\n\n==== Indian ragas ====\n\nIndian classical music has hundreds of ragas, of which many are pentatonic. Examples include Raag Abhogi Kanada (C, D, E-flat, F, A), Raag Bhupali (C, D, E, G, A), Raag Bairagi (C, D-flat, F, G, B-flat), Raag Chandrakauns (C, E-flat, F, A-flat, B), Raag Dhani (C, E-flat, F, G, B-flat), Raag Durga (C, D, F, G, A), Raag Gunakari (C, D-flat, F, G, A-flat), Raag Hamsadhwani (C, D, E, G, B), Raag Hindol (C, E, F#, A, B), Raag Kalavati (C, E, G, A, B-flat), Raag Katyayani (C, D, E-flat, G, A-flat), Raag Malkauns (C, E-flat, F, A-flat, B-flat), Raag Megh (C, D, F, G, B-flat), Raag Shivaranjani (C, D, E-flat, G, A), Raag Shuddha Sarang (C, D, F#, G, B), Raag Tilang (C, E, F, G, B), Raag Vibhas (C, D-flat, E, G, A-flat), Raag Vrindavani Sarang (C, D, F, G, B), and others.\n(For Tamil Music System, See here - Ancient Tamil music#Evolution of panns )\n\n\n==== Further Asian pentatonic musical traditions ====\n\nThe major pentatonic scale is the basic scale of the music of China and the music of Mongolia as well as many Southeast Asian musical traditions such as that of the Karen people as well as the indigenous Assamese ethnic groups. The pentatonic scale predominates most Eastern countries as opposed to Western countries where the heptatonic scale is more commonly used. The fundamental tones (without meri or kari techniques) rendered by the five holes of the Japanese shakuhachi flute play a minor pentatonic scale. The yo scale used in Japanese shomyo Buddhist chants and gagaku imperial court music is an anhemitonic pentatonic scale shown below, which is the fourth mode of the major pentatonic scale.\n\nIn Javanese gamelan music, the slendro scale has five tones, of which four are emphasized in classical music. Another scale, pelog, has seven tones, and is generally played using one of three five-tone subsets known as pathet, in which certain notes are avoided while others are emphasized.\n\n\n==== Somali ====\nSomali music uses a distinct modal system that is pentatonic, with characteristically long intervals between some notes. As with many other aspects of Somali culture and tradition, tastes in music and lyrics are strongly linked with those in nearby Ethiopia, Eritrea, Djibouti and Sudan.\n\n\n==== Insular Celtic ====\nIn Scottish music, the pentatonic scale is very common. Seumas MacNeill suggests that the Great Highland bagpipe scale with its augmented fourth and diminished seventh is \"a device to produce as many pentatonic scales as possible from its nine notes\" (although these two features are not in the same scale). Roderick Cannon explains these pentatonic scales and their use in more detail, both in Piobaireachd and light music. It also features in Irish traditional music, either purely or almost so. The minor pentatonic is used in Appalachian folk music.\n\n\n==== Andean ====\n\nIn Andean music, the pentatonic scale is used substantially minor, sometimes major, and seldom in scale. In the most ancient genres of Andean music being performed without string instruments (only with winds and percussion), pentatonic melody is often led with parallel fifths and fourths, so formally this music is hexatonic.\n\n\n==== Jazz ====\n\nJazz music commonly uses both the major and the minor pentatonic scales. Pentatonic scales are useful for improvisers in modern jazz, pop, and rock contexts because they work well over several chords diatonic to the same key, often better than the parent scale. For example, the blues scale is predominantly derived from the minor pentatonic scale, a very popular scale for improvisation in the realms of blues and rock alike. For instance, over a C major triad (C, E, G) in the key of C major, the note F can be perceived as dissonant as it is a half step above the major third (E) of the chord. It is for this reason commonly avoided. Using the major pentatonic scale is an easy way out of this problem. The scale tones 1, 2, 3, 5, 6 (from the major pentatonic) are either major triad tones (1, 3, 5) or common consonant extensions (2, 6) of major triads. For the corresponding relative minor pentatonic, scale tones 1, ♭3, 4, 5, ♭7 work the same way, either as minor triad tones (1, ♭3, 5) or as common extensions (4, ♭7), as they all avoid being a half step from a chord tone.\n\n\n==== Other ====\nBlackfoot music most often uses anhemitonic tetratonic or pentatonic scales.\nU.S. military cadences, or jodies, which keep soldiers in step while marching or running, also typically use pentatonic scales.\nHymns and other religious music sometimes use the pentatonic scale; for example, the melody of the hymn \"Amazing Grace.\"\nThe common pentatonic major and minor scales (C-D-E-G-A and C-E♭-F-G-B♭, respectively) are useful in modal composing, as both scales allow a melody to be modally ambiguous between their respective major (Ionian, Lydian, Mixolydian) and minor (Aeolian, Phrygian, Dorian) modes (Locrian excluded). With either modal or non-modal writing, however, the harmonization of a pentatonic melody does not necessarily have to be derived from only the pentatonic pitches.\nMost Tuareg songs are pentatonic, as is most other music from the Sahel and Sudan regions.\n\n\n== Role in education ==\nThe pentatonic scale plays a significant role in music education, particularly in Orff-based, Kodály-based, and Waldorf methodologies at the primary or elementary level.\nThe Orff system places a heavy emphasis on developing creativity through improvisation in children, largely through use of the pentatonic scale. Orff instruments, such as xylophones, bells and other metallophones, use wooden bars, metal bars or bells, which can be removed by the teacher, leaving only those corresponding to the pentatonic scale, which Carl Orff himself believed to be children's native tonality.\nChildren begin improvising using only these bars, and over time, more bars are added at the teacher's discretion until the complete diatonic scale is being used. Orff believed that the use of the pentatonic scale at such a young age was appropriate to the development of each child, since the nature of the scale meant that it was impossible for the child to make any real harmonic mistakes.\nIn Waldorf education, pentatonic music is considered to be appropriate for young children due to its simplicity and unselfconscious openness of expression. Pentatonic music centered on intervals of the fifth is often sung and played in early childhood; progressively smaller intervals are emphasized within primarily pentatonic as children progress through the early school years. At around nine years of age the music begins to center on first folk music using a six-tone scale, and then the modern diatonic scales, with the goal of reflecting the children's developmental progress in their musical experience. Pentatonic instruments used include lyres, pentatonic flutes, and tone bars; special instruments have been designed and built for the Waldorf curriculum.\n\n\n== See also ==\nJazz scale – Any musical scale used in jazz\nQuartal and quintal harmony – Types of harmonic structures in music\nRaga – Melodic mode of improvisation in Indian music\nSuspended chord – Musical chord in which the (major or minor) third is omitted\nTraditional sub-Saharan African harmony – Music theory of harmony\n\n\n== References ==\n\n\n== Further reading ==\nJeff Burns, Pentatonic Scales for the Jazz-Rock Keyboardist (Lebanon, Indiana: Houston Publishing, 1997). ISBN 978-0-7935-7679-1.\nJeremy Day-O'Connell, Pentatonicism from the Eighteenth Century to Debussy (Rochester: University of Rochester Press 2007) – the first comprehensive account of the increasing use of the pentatonic scale in 19th-century Western art music, including a catalogue of over 400 musical examples.\nTrần Văn Khê, \"Le pentatonique est-il universel? Quelques reflexions sur le pentatonisme\", The World of Music 19, nos. 1–2:85–91 (1977). English translation: \"Is the pentatonic universal? A few reflections on pentatonism\" pp. 76–84.\nYamaguchi Masaya (New York: Charles Colin, 2002; New York: Masaya Music, Revised 2006). Pentatonicism in Jazz: Creative Aspects and Practice. ISBN 0-9676353-1-4\nKurt Reinhard, \"On the problem of pre-pentatonic scales: particularly the third-second nucleus\", Journal of the International Folk Music Council 10 (1958). JSTOR 835966\n\n\n== External links ==\n\nPower of pentatonic scale on YouTube, Bobby McFerrin",
+  "sections": [
+    {
+      "title": "Types",
+      "depth": 1,
+      "number": "1"
+    },
+    {
+      "title": "Hemitonic and anhemitonic",
+      "depth": 2,
+      "number": "1.1"
+    },
+    {
+      "title": "Major pentatonic scale",
+      "depth": 2,
+      "number": "1.2"
+    },
+    {
+      "title": "Minor pentatonic scale",
+      "depth": 2,
+      "number": "1.3"
+    },
+    {
+      "title": "Japanese scale",
+      "depth": 2,
+      "number": "1.4"
+    },
+    {
+      "title": "Modes of the pentatonic scale",
+      "depth": 1,
+      "number": "2"
+    },
+    {
+      "title": "Relationship to diatonic modes",
+      "depth": 2,
+      "number": "2.1"
+    },
+    {
+      "title": "Intervals from tonic",
+      "depth": 2,
+      "number": "2.2"
+    },
+    {
+      "title": "Tuning",
+      "depth": 1,
+      "number": "3"
+    },
+    {
+      "title": "Pythagorean tuning",
+      "depth": 2,
+      "number": "3.1"
+    },
+    {
+      "title": "Just intonation",
+      "depth": 2,
+      "number": "3.2"
+    },
+    {
+      "title": "Other",
+      "depth": 2,
+      "number": "3.3"
+    },
+    {
+      "title": "Use of pentatonic scales",
+      "depth": 1,
+      "number": "4"
+    },
+    {
+      "title": "Overview",
+      "depth": 2,
+      "number": "4.1"
+    },
+    {
+      "title": "Example details",
+      "depth": 2,
+      "number": "4.2"
+    },
+    {
+      "title": "In classical music",
+      "depth": 3,
+      "number": "4.2.1"
+    },
+    {
+      "title": "Indian ragas",
+      "depth": 3,
+      "number": "4.2.2"
+    },
+    {
+      "title": "Further Asian pentatonic musical traditions",
+      "depth": 3,
+      "number": "4.2.3"
+    },
+    {
+      "title": "Somali",
+      "depth": 3,
+      "number": "4.2.4"
+    },
+    {
+      "title": "Insular Celtic",
+      "depth": 3,
+      "number": "4.2.5"
+    },
+    {
+      "title": "Andean",
+      "depth": 3,
+      "number": "4.2.6"
+    },
+    {
+      "title": "Jazz",
+      "depth": 3,
+      "number": "4.2.7"
+    },
+    {
+      "title": "Other",
+      "depth": 3,
+      "number": "4.2.8"
+    },
+    {
+      "title": "Role in education",
+      "depth": 1,
+      "number": "5"
+    },
+    {
+      "title": "See also",
+      "depth": 1,
+      "number": "6"
+    },
+    {
+      "title": "References",
+      "depth": 1,
+      "number": "7"
+    },
+    {
+      "title": "Further reading",
+      "depth": 1,
+      "number": "8"
+    },
+    {
+      "title": "External links",
+      "depth": 1,
+      "number": "9"
+    }
+  ]
+}
