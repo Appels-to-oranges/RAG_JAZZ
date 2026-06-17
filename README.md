@@ -60,15 +60,46 @@ Each article file contains:
 pip install -r requirements.txt
 ```
 
-## Scripts
+## RAG Pipeline
+
+### 1. Build chunks
+
+Splits all articles into ~500-character overlapping chunks with metadata (title, section, source URL).
+
+```bash
+python build_chunks.py
+```
+
+Outputs `chunks.json` (704 chunks across 20 articles).
+
+### 2. Build vector store
+
+Embeds all chunks using `all-MiniLM-L6-v2` and stores them in a local ChromaDB database.
+
+```bash
+python build_vectorstore.py
+```
+
+Persists to `./chroma_db/`.
+
+### 3. Query
+
+Retrieves relevant chunks and generates an answer using a local Ollama LLM.
+
+```bash
+python query.py "What is a tritone substitution?"
+python query.py --no-llm "circle of fifths"       # retrieval only
+python query.py --model mistral "stride piano"     # use a different model
+```
+
+Requires [Ollama](https://ollama.com/download) with a pulled model:
+
+```bash
+ollama pull llama3.2
+```
+
+## Other Scripts
 
 - `download_articles.py` — Primary downloader using `wikipedia-api`
 - `download_remaining.py` — Fallback downloader using the MediaWiki REST API directly (handles rate limits)
 - `rebuild_manifest.py` — Regenerates `articles/_manifest.json` from all article files
-
-## Next Steps
-
-- Add richer metadata (topic tags, difficulty level, key concepts per section)
-- Chunk articles into embedding-sized passages
-- Build vector index for semantic search
-- Wire up RAG pipeline with LLM for query-time retrieval
