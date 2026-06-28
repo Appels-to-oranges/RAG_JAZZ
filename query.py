@@ -26,13 +26,20 @@ import textwrap
 
 import chromadb
 
+# Force UTF-8 output on Windows so music symbols (sharps, flats) render
+# instead of crashing with a codec error.
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-CHROMA_DIR = "./chroma_db"
-COLLECTION_NAME = "jazz_piano"
-DEFAULT_K = 5
-DEFAULT_MODEL = "llama3.2"
+# --- Configuration ---
 
+CHROMA_DIR = "./chroma_db"          # Must match build_vectorstore.py
+COLLECTION_NAME = "jazz_piano"      # Must match build_vectorstore.py
+DEFAULT_K = 5                       # Number of chunks to retrieve per query
+DEFAULT_MODEL = "llama3.2"          # Ollama model to use for generation
+
+# System prompt sent to the LLM.  This constrains the model to only use
+# the provided context (no hallucinating from training data) and to cite
+# which article/section each fact came from.
 SYSTEM_PROMPT = textwrap.dedent("""\
     You are a jazz piano and music theory expert.
     Answer the user's question using ONLY the context passages provided below.
@@ -42,6 +49,20 @@ SYSTEM_PROMPT = textwrap.dedent("""\
 
 
 def retrieve(collection, question, k=DEFAULT_K):
+    """
+    Perform semantic search against the ChromaDB collection.
+
+    How it works:
+      - ChromaDB embeds the question using the same model (all-MiniLM-L6-v2)
+        that was used to embed the chunks at index time.
+      - It computes cosine distance between the question vector and all stored
+        chunk vectors, then returns the K closest matches.
+      - Each result includes the original text, its metadata, and the distance
+        score (lower = more similar; 0.0 = identical, 2.0 = opposite).
+
+    Returns a list of hit dicts sorted by relevance (most similar first):
+      [{"text": "...", "metadata": {...}, "distance": 0.23}, ...]
+    """
     results = collection.query(query_texts=[question], n_results=k)
     hits = []
     for doc, meta, dist in zip(
@@ -54,6 +75,20 @@ def retrieve(collection, question, k=DEFAULT_K):
 
 
 def build_context_block(hits):
+    """
+    Format retrieved chunks into a numbered text block for the LLM prompt.
+
+    The LLM receives this as its "context" -- the only information it's
+    allowed to use when answering.  Each chunk is labeled with a number
+    and its source (article title + section) so the LLM can cite them.
+
+    Example output:
+      [1] Article: Tritone substitution | Section: Introduction
+      The tritone substitution is a common chord substitution...
+
+      [2] Article: Chord progression | Section: Blues changes
+      ...
+    """
     lines = []
     for i, hit in enumerate(hits, 1):
         m = hit["metadata"]
@@ -64,6 +99,21 @@ def build_context_block(hits):
 
 
 def query_ollama(question, context, model=DEFAULT_MODEL):
+    """
+    Send the question + retrieved context to a local Ollama LLM and get an answer.
+
+    How it works:
+      - Imports the ollama Python client (HTTP client that talks to the Ollama
+        server running on localhost:11434)
+      - Builds a chat with two messages:
+          * system: instructs the model to only use the provided context
+          * user: the context block + the actual question
+      - Returns (answer_text, None) on success, or (None, error_message) on failure
+
+    Error handling:
+      - ConnectionError: Ollama server isn't running
+      - ResponseError with "not found": the requested model hasn't been pulled
+    """
     try:
         import ollama as ol
     except ImportError:
@@ -92,6 +142,16 @@ def query_ollama(question, context, model=DEFAULT_MODEL):
 
 
 def main():
+    """
+    End-to-end RAG query pipeline:
+      1. Parse command-line arguments (question, number of chunks, model, etc.)
+      2. Open the persisted ChromaDB collection
+      3. Retrieve the K most relevant chunks via semantic search
+      4. Display the retrieved chunks with similarity scores
+      5. (Unless --no-llm) Send chunks + question to Ollama for a natural
+         language answer, then display the answer with source citations
+    """
+    # --- Parse arguments ---
     parser = argparse.ArgumentParser(description="Query the Jazz Piano RAG system")
     parser.add_argument("question", help="Your question about jazz piano or music theory")
     parser.add_argument("--k", type=int, default=DEFAULT_K, help="Number of chunks to retrieve")
@@ -99,18 +159,22 @@ def main():
     parser.add_argument("--no-llm", action="store_true", help="Show retrieved chunks only, skip LLM")
     args = parser.parse_args()
 
+    # --- Connect to the existing vector store ---
     client = chromadb.PersistentClient(path=CHROMA_DIR)
     collection = client.get_collection(COLLECTION_NAME)
 
     print(f"\nSearching {collection.count()} chunks for: \"{args.question}\"\n")
 
+    # --- Retrieve relevant chunks ---
     hits = retrieve(collection, args.question, k=args.k)
 
+    # --- Display retrieved chunks ---
     print("=" * 60)
     print("RETRIEVED CHUNKS")
     print("=" * 60)
     for i, hit in enumerate(hits, 1):
         m = hit["metadata"]
+        # Convert cosine distance to similarity: similarity = 1 - distance
         sim = 1 - hit["distance"]
         print(f"\n[{i}] {m['title']} > {m['section']}  (similarity: {sim:.2%})")
         print("-" * 60)
@@ -119,6 +183,7 @@ def main():
     if args.no_llm:
         return
 
+    # --- Generate LLM answer ---
     print("\n" + "=" * 60)
     print("GENERATING ANSWER...")
     print("=" * 60)
@@ -135,6 +200,7 @@ def main():
         print(f"  3. Re-run this script")
         return
 
+    # --- Display answer with citations ---
     print(f"\n{answer}")
     print("\n" + "-" * 60)
     print("Sources used:")

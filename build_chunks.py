@@ -24,16 +24,22 @@ import re
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
+# --- Configuration ---
+
 ARTICLES_DIR = "articles"
 OUTPUT_FILE = "chunks.json"
-CHUNK_SIZE = 500
-CHUNK_OVERLAP = 100
+CHUNK_SIZE = 500       # Max characters per chunk
+CHUNK_OVERLAP = 100    # Characters shared between consecutive chunks
 
+# Sections that contain no useful content for RAG (references, links, etc.)
 SKIP_SECTIONS = {
     "See also", "References", "External links", "Sources",
     "Further reading", "Notes", "Bibliography",
 }
 
+# The splitter tries each separator in order.  It picks the first one that
+# produces pieces under CHUNK_SIZE.  So it prefers paragraph breaks, then
+# line breaks, then sentence ends, then word boundaries, then character-level.
 splitter = RecursiveCharacterTextSplitter(
     chunk_size=CHUNK_SIZE,
     chunk_overlap=CHUNK_OVERLAP,
@@ -43,9 +49,17 @@ splitter = RecursiveCharacterTextSplitter(
 
 
 def build_section_map(full_text):
-    """Parse '== Section ==' headers from full_text to map character offsets
-    to section names.  Used for articles downloaded via the direct MediaWiki API
-    where sections don't carry their own text field."""
+    """
+    Build a list of (char_offset, section_name) markers from wiki-style headers.
+
+    Some articles (downloaded via the direct MediaWiki API) store ALL their text
+    in a single 'full_text' field with '== Section ==' style headers inline.
+    This function scans for those headers and records where each section starts,
+    so we can later determine which section any given character position falls in.
+
+    Returns a list of tuples: [(0, "Introduction"), (450, "History"), (1200, "Theory"), ...]
+    The list is in ascending offset order.
+    """
     header_re = re.compile(r"^(={2,})\s*(.+?)\s*\1\s*$", re.MULTILINE)
     markers = [(0, "Introduction")]
     for m in header_re.finditer(full_text):
@@ -54,8 +68,14 @@ def build_section_map(full_text):
 
 
 def section_at(markers, char_offset):
-    """Given sorted (offset, name) markers, return the section name active at
-    char_offset."""
+    """
+    Given a list of (offset, section_name) markers, determine which section
+    contains the given character position.
+
+    Walks through markers in order.  The last marker whose offset is <= char_offset
+    is the active section.  For example, if markers are [(0, "Intro"), (500, "History")]
+    and char_offset is 600, the result is "History".
+    """
     current = "Introduction"
     for offset, name in markers:
         if offset > char_offset:
@@ -65,8 +85,15 @@ def section_at(markers, char_offset):
 
 
 def collect_section_texts(sections, depth=0):
-    """Recursively collect (section_title, text) pairs from wikipedia-api
-    style nested sections."""
+    """
+    Recursively walk the nested section tree and collect (title, text) pairs.
+
+    Used for articles downloaded via the wikipedia-api library, where each section
+    is a dict with 'title', 'text', and 'subsections' (a list of child sections).
+    Skips boilerplate sections like "References" and "See also".
+
+    Returns a flat list: [("Learning jazz piano", "Mastering the various..."), ...]
+    """
     results = []
     for sec in sections:
         title = sec.get("title", "")
@@ -87,7 +114,13 @@ def collect_section_texts(sections, depth=0):
 
 
 def has_section_text(sections):
-    """Check whether sections carry their own text (wikipedia-api format)."""
+    """
+    Detect which article format we're dealing with.
+
+    Returns True if the sections themselves carry text content (wikipedia-api format).
+    Returns False if sections are just title/depth metadata and the real text lives
+    in full_text (direct MediaWiki API format).
+    """
     for sec in sections:
         if sec.get("text", "").strip():
             return True
@@ -98,6 +131,21 @@ def has_section_text(sections):
 
 
 def chunk_article(article):
+    """
+    Split a single article into chunks, each with metadata.
+
+    Handles two different article formats:
+      1. wikipedia-api format: sections have their own 'text' field.
+         We chunk the intro paragraph, then chunk each section's text separately
+         so that section attribution stays accurate.
+
+      2. Direct MediaWiki API format: all text is in 'full_text' with inline
+         '== Header ==' markers.  We strip the headers, chunk the cleaned text,
+         then map each chunk back to its section by finding where the chunk's text
+         appears in the original (using character offsets from build_section_map).
+
+    Returns a list of chunk dicts: [{"text": "...", "metadata": {...}}, ...]
+    """
     meta = article["metadata"]
     title = meta["title"]
     url = meta.get("url", meta.get("source_url", ""))
@@ -107,9 +155,13 @@ def chunk_article(article):
     chunks = []
 
     if has_section_text(sections):
-        # Wikipedia-api format: sections carry text
-        # Chunk the summary / intro (text before first section)
+        # --- Format 1: wikipedia-api (sections carry text) ---
+
+        # Collect all (section_title, section_text) pairs from the nested tree
         intro_parts = collect_section_texts(sections)
+
+        # The intro/summary is the text before the first section header.
+        # We grab it from the start of full_text up to the first double-newline block.
         intro_text = full_text.split("\n\n")[0] if full_text else ""
         if intro_text.strip():
             for i, chunk_text in enumerate(splitter.split_text(intro_text)):
@@ -123,6 +175,7 @@ def chunk_article(article):
                     },
                 })
 
+        # Chunk each section independently so metadata stays accurate
         for sec_title, sec_text in intro_parts:
             for chunk_text in splitter.split_text(sec_text):
                 chunks.append({
@@ -135,7 +188,9 @@ def chunk_article(article):
                     },
                 })
     else:
-        # Direct MediaWiki API format: all text in full_text with == headers ==
+        # --- Format 2: Direct MediaWiki API (text with inline == headers ==) ---
+
+        # Strip section headers from the text so they don't end up inside chunks
         clean = re.sub(r"^={2,}\s*.+?\s*={2,}\s*$", "", full_text, flags=re.MULTILINE)
         lines = clean.strip().split("\n")
         filtered_lines = [
@@ -144,11 +199,19 @@ def chunk_article(article):
         ]
         clean_text = "\n".join(filtered_lines)
 
+        # Build a map of where each section starts in the ORIGINAL text
+        # (before we stripped headers), so we can look up sections by position
         section_markers = build_section_map(full_text)
+
+        # Split the cleaned text into chunks
         raw_chunks = splitter.split_text(clean_text)
 
+        # For each chunk, find its position in the original text to determine
+        # which section it belongs to.  We search forward (search_start) to
+        # avoid matching earlier occurrences of the same text.
         search_start = 0
         for chunk_text in raw_chunks:
+            # Use first 80 chars of the chunk to locate it in the original
             pos = full_text.find(chunk_text[:80], search_start)
             if pos == -1:
                 pos = search_start
@@ -171,9 +234,15 @@ def chunk_article(article):
 
 
 def main():
+    """
+    Load all article JSON files, chunk each one, and write the combined
+    result to chunks.json.  Prints per-article stats so you can verify
+    coverage.
+    """
     all_chunks = []
     article_stats = {}
 
+    # Process each article file (skip the _manifest.json)
     for filename in sorted(os.listdir(ARTICLES_DIR)):
         if filename.startswith("_") or not filename.endswith(".json"):
             continue
@@ -185,6 +254,8 @@ def main():
         article_stats[article["metadata"]["title"]] = len(chunks)
         all_chunks.extend(chunks)
 
+    # Write all chunks to a single JSON file for inspection and for
+    # build_vectorstore.py to consume
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(all_chunks, f, indent=2, ensure_ascii=False)
 
